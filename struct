@@ -1,0 +1,10 @@
+struct Point {  
+    x: i32,  
+    y: f64,  
+}
+ 
+fn main() {
+	let mut point = Point { x: 10, y: 20.0 }; 
+	point.x = 5;
+    println!("({},{})", point.x, point.y);  // 输出：(5,20)
+}
