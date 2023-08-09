@@ -1,0 +1,14 @@
+String hostname = OperatorProxyProperties.EXTERNAL_SERVER_ADDRESS;  
+		String port = OperatorProxyProperties.EXTERNAL_SERVER_PORT;  
+		String clientLoginId = OperatorProxyProperties.CLIENT_LOGIN;  
+    	    String clientPassword = OperatorProxyProperties.CLIENT_PASSWRD; 
+     
+            // instan 
+            try { 
+			externalUserMgr = new ExternalClientObject(hostname, port, 
+             clientLoginId, clientPassword); 
+            } catch (Exception expt) { 
+                // process the exception 
+         throw expt; 
+            } 
+        } 
