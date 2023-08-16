@@ -1,0 +1,30 @@
+static int frameCount = 0;
+    static int enemyFre = 50;
+    frameCount++;
+    if(frameCount > enemyFre ){
+        frameCount = 0;
+        enemyFre = 50 + rand()%50 ;
+        createObstacle();
+    }
+        
+    for(int i = 0;i < OBSTACLE_COUNT;i++)
+    {
+		if(obstacles[i].exist)
+        {
+		obstacles[i].x -= obstacles[i].speed + bgSpeed[2];
+            
+            
+            if(obstacles[i].x < -obstaceImgs[obstacles[i].type][0].getwidth() *2)//跑出screen
+            {
+                obstacles[i].exist = false;    
+            
+       		 }
+            int len = obstacleImgs[obstacles[i].type].size();
+            
+            obstacles[i].imgIndex = (obstacles[i].imgIndex+1) % len;
+            
+    }
+    
+ 
+}
+}
